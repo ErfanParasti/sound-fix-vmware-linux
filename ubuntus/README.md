@@ -1,19 +1,39 @@
-🛠️ Fix Audio Glitches in Ubuntu VM (VMware)
 
-If you're experiencing **audio interruptions or stuttering** in your Ubuntu virtual machine (especially on **Ubuntu 24.10+ with PipeWire**), this guide helps you **switch back to PulseAudio** for better stability in VMware environments.
+# 🎧 Fix Audio Glitches in Ubuntu VM (VMware)
+
+> **Tired of audio crackling, stuttering, or vanishing in your Ubuntu VM?**  
+> Here's a clean, proven fix that **restores smooth sound** by switching from PipeWire back to the old, stable PulseAudio inside VMware.
 
 ---
 
-## 🧹 Disable PipeWire Completely
+## ⚙️ Supported Setup
+
+| Component       | Recommended Version |
+|----------------|---------------------|
+| Ubuntu          | 24.10 (or newer)    |
+| VMware Workstation | Any recent version |
+| Audio Device    | `hdaudio` or `es1371` |
+
+---
+
+## ❌ Step 1 – Disable PipeWire
+
+PipeWire is modern but can be unstable inside VMs. Let’s shut it down completely:
 
 ```bash
 systemctl --user --now disable pipewire.socket pipewire-pulse.socket
 systemctl --user mask pipewire.service pipewire-pulse.service pipewire.socket pipewire-pulse.socket
 
+> Tip: This ensures PipeWire won’t auto-start in future sessions.
+
+
+
 
 ---
 
-💡 Enable and Restart PulseAudio
+✅ Step 2 – Enable PulseAudio
+
+Let’s bring back good old PulseAudio:
 
 systemctl --user enable pulseaudio
 systemctl --user restart pulseaudio
@@ -21,48 +41,55 @@ systemctl --user restart pulseaudio
 
 ---
 
-🔁 Reboot Your System
+🔁 Step 3 – Reboot the VM
 
 reboot
 
+Give it a fresh start!
+
 
 ---
 
-🔊 Test the Sound
+🎼 Step 4 – Test Your Audio
 
-After rebooting, check if audio is smooth and glitch-free:
+Run a test or just go to settings:
 
 speaker-test -t wav -c 2
 
-Or go to Settings → Sound and verify the output device.
+Or open:
+
+Settings → Sound
+
+Make sure you’ve selected the correct output device and that audio is smooth.
 
 
 ---
 
-📝 Notes
+🛠️ Optional: VMX Config Tweak
 
-Tested with:
-
-Ubuntu 24.10
-
-VMware Workstation
-
-Sound device: hdaudio or es1371
-
-
-Optional .vmx tweak:
+If audio is still weird, tweak your .vmx file:
 
 sound.virtualDev = "es1371"
 
+This virtual device is known to behave better with PulseAudio.
 
 
 ---
 
-✅ Confirmed Working?
+✍️ Feedback Welcome!
 
-If this fix helped you, let me know via Issues or submit a Pull Request with improvements!
+If this helped you, give the repo a ⭐ or open an Issue or Pull Request with improvements or confirmations!
 
 
 ---
 
-Licensed under MIT
+📄 License
+
+Released under the MIT License.
+
+
+---
+
+> Made with patience, tested with frustration, shared with love.
+
+
