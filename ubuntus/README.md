@@ -103,7 +103,7 @@ Released under the MIT License.
 
 Just run the ready-made shell script:
 ```bash
- git clone https://github.com/ErfanParasti/sound-fix-vmware-linux.git
+git clone https://github.com/ErfanParasti/sound-fix-vmware-linux.git
 
 cd ./sound-fix-vmware-linux/ubuntu
 
