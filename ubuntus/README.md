@@ -67,12 +67,9 @@ Make sure you’ve selected the correct output device and that audio is smooth.
 🛠️ Optional: VMX Config Tweak
 
 If audio is still weird, tweak your .vmx file:
-`
-sound.virtualDev = "es1371"`
-_or_`
-sound.virtualDev = "hdaudio"
-
-`
+`sound.virtualDev = "es1371"`
+_or_
+`sound.virtualDev = "hdaudio"`
 This virtual device is known to behave better with PulseAudio.
 
 
