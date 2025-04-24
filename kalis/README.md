@@ -54,7 +54,7 @@ speaker-test -t wav -c 2
 ```
 Or go to:
 
-Settings → Sound
+`Settings → Sound`
 
 And make sure your output device is set correctly.
 
@@ -65,8 +65,8 @@ And make sure your output device is set correctly.
 
 If audio is still buggy, edit your .vmx file:
 `
-sound.virtualDev = "es1371"
-_or_
+sound.virtualDev = "es1371"`
+_or_`
 sound.virtualDev = "hdaudio"
 `
 These virtual devices are often more compatible with PulseAudio.
