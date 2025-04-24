@@ -5,8 +5,8 @@ This repo provides simple, battle-tested fixes to get clean and smooth sound ins
 
 ## 📂 Available Fixes
 
-- **Ubuntu** → [`ubuntu/fix-audio.sh`](./ubuntu/fix-audio.sh)
-- **Kali Linux** → [`kali/fix-audio.sh`](./kali/fix-audio.sh)
+- **Ubuntu** → [`ubuntu`](./ubuntu/)
+- **Kali Linux** → [`kali`](./kali/)
 
 > Tested on VMware Workstation 17 / Ubuntu 24.04+ / Kali 2023+
 
