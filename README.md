@@ -5,8 +5,8 @@ This repo provides simple, battle-tested fixes to get clean and smooth sound ins
 
 ## 📂 Available Fixes
 
-- **Ubuntu** → [`ubuntu`](./ubuntu/)
-- **Kali Linux** → [`kali`](./kali/)
+- **Ubuntu** → [`ubuntu`](./ubuntu/README.md)
+- **Kali Linux** → [`kali`](./kali/README.md)
 
 > Tested on VMware Workstation 17 / Ubuntu 24.04+ / Kali 2023+
 
@@ -16,4 +16,4 @@ Found a better fix? Help others by opening a pull request!
 
 ## ❤️ Author
 
-Created by [your-name] – because no one deserves glitchy sound.
+Created by your friend – because no one deserves glitchy sound.
