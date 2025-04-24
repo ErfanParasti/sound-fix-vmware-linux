@@ -23,6 +23,7 @@ PipeWire is modern but can be unstable inside VMs. Let’s shut it down complete
 ```bash
 systemctl --user --now disable pipewire.socket pipewire-pulse.socket
 systemctl --user mask pipewire.service pipewire-pulse.service pipewire.socket pipewire-pulse.socket
+```
 
 > Tip: This ensures PipeWire won’t auto-start in future sessions.
 
@@ -35,26 +36,28 @@ systemctl --user mask pipewire.service pipewire-pulse.service pipewire.socket pi
 
 Let’s bring back good old PulseAudio:
 
+```
 systemctl --user enable pulseaudio
 systemctl --user restart pulseaudio
 
-
+```
 ---
 
 🔁 Step 3 – Reboot the VM
-
+```
 reboot
-
+```
 Give it a fresh start!
 
 
 ---
 
 🎼 Step 4 – Test Your Audio
-
+```
 Run a test or just go to settings:
 
 speaker-test -t wav -c 2
+```
 
 Or open:
 
@@ -68,8 +71,9 @@ Make sure you’ve selected the correct output device and that audio is smooth.
 🛠️ Optional: VMX Config Tweak
 
 If audio is still weird, tweak your .vmx file:
-
+```
 sound.virtualDev = "es1371"
+```
 
 This virtual device is known to behave better with PulseAudio.
 
