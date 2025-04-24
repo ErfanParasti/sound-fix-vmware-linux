@@ -103,9 +103,12 @@ Released under the MIT License.
 
 Just run the ready-made shell script:
 ```bash
+ git clone https://github.com/ErfanParasti/sound-fix-vmware-linux.git
 
-chmod +x fix-audio
+cd ./sound-fix-vmware-linux/ubuntu
 
-./fix-audio
+chmod +x fix-audio.sh
+
+./fix-audio.sh
 
 ```
